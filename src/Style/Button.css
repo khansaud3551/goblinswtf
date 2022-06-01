@@ -1,0 +1,89 @@
+.hideBtnGo{
+  transform: translateY(-100vh);
+}
+.btnGo {
+  font-size: 28px;
+  border: 2px solid black;
+  padding: 12px 16px 8px;
+  background: var(--whiskey);
+  border-radius: 9px 7px 5px 8px;
+  height: 56px;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 0 black;
+  filter: drop-shadow(4px 6px 0 rgba(0, 0, 0, 0.125));
+  transition: 5s;
+}
+
+
+* {
+  --whiskey: #ca9e7c;
+  --gulf-dark: #81afa4;
+}
+
+#Enter:hover {
+  -webkit-animation: flicker 0.25s linear infinite;
+  animation: flicker 0.25s linear infinite;
+  background: var(--gulf-dark);
+  color: white;
+}
+
+#Enter {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  z-index: 99;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  pointer-events: initial !important;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#Enter::before {
+  --little-size: 32px;
+  content: "";
+  position: absolute;
+  background: transparent url(https://goblintown.wtf/i/GT-little7-crop.png) no-repeat center center/var(--little-size);
+  top: -22px;
+  left: -14px;
+  width: var(--little-size);
+  aspect-ratio: 1;
+  z-index: 9;
+}
+
+#Enter:hover span {
+  -webkit-animation: flicker-font 0.25s linear infinite;
+  animation: flicker-font 0.25s linear infinite;
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes flicker {
+  50% {
+    transform: rotate(0.5deg);
+    font-weight: 700;
+  }
+}
+
+@keyframes flicker {
+  50% {
+    transform: rotate(0.5deg);
+    font-weight: 700;
+  }
+}
+
+@-webkit-keyframes flicker-font {
+  50% {
+    font-family: var(--font-alt);
+    font-style: italic;
+  }
+}
+
+@keyframes flicker-font {
+  50% {
+    font-family: var(--font-alt);
+    font-style: italic;
+  }
+}

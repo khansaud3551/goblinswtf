@@ -1,0 +1,41 @@
+.App{
+  background-image: url(../../public/images/big.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media screen and (max-width:1000px) {
+  .App{
+    background-image: url(../../public/images/med.png);
+  }
+  .social__icon > img{
+    height: 50px;
+  }
+}
+@media screen and (max-width:700px) {
+  .App{
+    background-image: url(../../public/images/sm.png);
+  }
+}
+
+.social__icons{
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+.social__icon {
+  outline: none;
+  margin: 0px 20px;
+}
+.social__icon > img{
+  height: 60px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.disabled{
+  opacity: 0.5;
+}
+.social__icon:hover > img{
+  transform: rotate(-10deg);
+}
