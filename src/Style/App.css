@@ -3,7 +3,9 @@
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+  padding: 20px 0px;
 }
+
 
 @media screen and (max-width:1000px) {
   .App{
@@ -20,16 +22,16 @@
 }
 
 .social__icons{
-  margin: 20px 0px;
+  margin: 30px 0px;
   display: flex;
   justify-content: center;
 }
 .social__icon {
   outline: none;
-  margin: 0px 20px;
+  margin: 0px 30px;
 }
 .social__icon > img{
-  height: 60px;
+  height: 70px;
   cursor: pointer;
   transition: 0.15s;
 }

@@ -3,7 +3,7 @@ import "../Style/mint.css"
 
 function Note() {
   return (
-    <div className="col-md-6 col-lg-6 col-sm-6">
+    <div className="col-lg-6">
       <div id="Actions">
         <div className="note">
           <header>
@@ -14,12 +14,12 @@ function Note() {
           </header>
           <img
             className="divide"
-            src="https://goblintown.wtf/i/GT-phone-header-border.png"
+            src="/images/GT-phone-header-border.png"
           />
           <main>
             <img
               id="Cage"
-              src="https://goblintown.wtf/i/GT-cage.png"
+              src="/images/GT-cage.png"
               width="56px"
             />
             <p>
@@ -29,7 +29,7 @@ function Note() {
           </main>
           <img
             className="divide"
-            src="https://goblintown.wtf/i/GT-phone-header-border.png"
+            src="/images/GT-phone-header-border.png"
           />
           <footer>
             <p>
