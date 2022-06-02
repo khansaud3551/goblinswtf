@@ -2,9 +2,9 @@
   transform: translateY(-100vh);
 }
 .btnGo {
-  font-size: 30px;
+  font-size: 36px;
   border: 2px solid black;
-  padding: 12px 16px 8px;
+  padding: 5px 16px 8px;
   background: var(--whiskey);
   border-radius: 9px 7px 5px 8px;
   height: 56px;
@@ -15,7 +15,7 @@
   box-shadow: 0 2px 0 black;
   filter: drop-shadow(4px 6px 0 rgba(0, 0, 0, 0.125));
   transition: 5s;
-  font-weight: 800;
+  font-weight:bolder;
 }
 
 

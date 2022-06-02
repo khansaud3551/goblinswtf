@@ -1,13 +1,20 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Mint from "./Components/Mint";
 import Note from "./Components/Note";
 import "./Style/App.css";
 import "./Style/Button.css";
 
 function App() {
-  
   // Play Audio
   const [audioStatus, changeAudioStatus] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setInterval(() => {
+      setLoading(true);
+    }, 2000);
+  });
+
   const myRef = useRef();
 
   const startAudio = () => {
@@ -36,9 +43,15 @@ function App() {
   return (
     <div className="App container-fluid">
       {/* Home Screen Button */}
-      <button onClick={displayMint} className={btnGo} id="Enter">
-        Fucking <span>enter</span> already
-      </button>
+      {loading ? (
+        <button onClick={displayMint} className={btnGo} id="Enter">
+          Fucking <span>enter</span> Already
+        </button>
+      ) : (
+        <button className={btnGo} style={{ cursor: "not-allowed" }} id="Enter">
+          Hold On Dammit
+        </button>
+      )}
 
       <div className={mint}>
         <audio ref={myRef} src="/images/music.mp3" />

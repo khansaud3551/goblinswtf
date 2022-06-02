@@ -14,7 +14,7 @@
     padding: 10px;
     position: relative;
     margin-top: 10px;
-    background: transparent url(https://goblintown.wtf/i/GT-phone-bg.png) no-repeat center center/100% 100%;
+    background: transparent url(../../public/images/GT-phone-bg.png) no-repeat center center/100% 100%;
     transform: rotate(-2deg);
     padding: 40px 26px;
     filter: drop-shadow(8px 12px 0 rgba(0, 0, 0, 0.125));
@@ -54,6 +54,7 @@
     text-decoration: none;
     color: #0e0e0e;
 }
+
 .PhoneButton:hover{
     transform: scale(1.025);
     filter: drop-shadow(0px 3px 10px #1a1a1a);
