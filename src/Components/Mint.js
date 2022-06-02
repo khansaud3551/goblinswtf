@@ -7,7 +7,7 @@ function Mint() {
       <div id="mint">
         <div className="mint__container">
           <img
-            src="https://goblintown.wtf/i/GT-logo.gif"
+            src="/images/GT-logo.gif"
             className="title__gif"
           />
           <div className="inputs">

@@ -35,10 +35,13 @@ function App() {
     if (mint === "mint") {
       setMint("displayMint");
       setBtnGo("hideBtnGo");
+      startAudio();
+      
     } else {
       setMint("mint");
     }
   };
+
 
   return (
     <div className="App container-fluid">
@@ -54,7 +57,7 @@ function App() {
       )}
 
       <div className={mint}>
-        <audio ref={myRef} src="/images/music.mp3" />
+        <audio ref={myRef} loop src="/images/music.mp3" />
         <div className="container">
           {/* Social Icons */}
           <div className="row justify-content-center">
@@ -89,7 +92,6 @@ function App() {
           <div className="row" data-aos="fade-up" data-aos-delay="300">
             {/* Mint Phone Screen */}
             <Mint />
-
             {/* Note */}
             <Note />
           </div>

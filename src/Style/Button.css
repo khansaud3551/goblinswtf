@@ -2,11 +2,12 @@
   transform: translateY(-100vh);
 }
 .btnGo {
-  font-size: 36px;
+  font-size: 28px;
   border: 2px solid black;
-  padding: 5px 16px 8px;
+  padding: 10px 16px 8px;
   background: var(--whiskey);
   border-radius: 9px 7px 5px 8px;
+  color: #000;
   height: 56px;
   cursor: pointer;
   position: relative;
