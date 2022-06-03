@@ -1,5 +1,5 @@
 .hideBtnGo{
-  transform: translateY(-100vh);
+  display: none;
 }
 .btnGo {
   font-size: 28px;
