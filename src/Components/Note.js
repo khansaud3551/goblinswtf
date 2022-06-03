@@ -1,5 +1,5 @@
 import React from "react";
-import "../Style/mint.css"
+import "../Style/mint.css";
 
 function Note() {
   return (
@@ -12,25 +12,21 @@ function Note() {
               greedy. That's how we got ourselves here.
             </p>
           </header>
-          <img
-            className="divide"
-            src="/images/GT-phone-header-border.png"
-          />
+          <img className="divide" src="/images/GT-phone-header-border.png" />
           <main>
-            <img
-              id="Cage"
-              src="/images/GT-cage.png"
-              width="56px"
-            />
-            <p>
-              <strong>We are reserving 1,000 goblins.</strong> Because we want
-              to.
-            </p>
+            <div className="row ">
+              <div className="col-md-5">
+                <img id="Cage" src="/images/GT-cage.png" className="nft__img" />
+              </div>
+              <div className="col-md-7 d-flex align-items-center">
+                <p className="mt-4">
+                  <strong>We are reserving 1,000 goblins.</strong> Because we
+                  want to.
+                </p>
+              </div>
+            </div>
           </main>
-          <img
-            className="divide"
-            src="/images/GT-phone-header-border.png"
-          />
+          <img className="divide" src="/images/GT-phone-header-border.png" />
           <footer>
             <p>
               No roadmap. No Discord. No utility. CC0.{" "}

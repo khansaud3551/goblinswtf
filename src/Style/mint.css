@@ -83,7 +83,7 @@
 }
 .note {
     width: 100%;
-    max-width: 450px;
+    /* max-width: 450px; */
     margin: 30px 0px;
     font-weight: 800;
     font-size: clamp(25px, 3vmin, 22px);
@@ -112,6 +112,10 @@
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
+}
+.nft__img{
+    border-radius: 30px;
+    width: 100%;
 }
 #Follow {
     padding: 8px;
