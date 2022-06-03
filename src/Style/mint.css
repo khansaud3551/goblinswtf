@@ -83,6 +83,7 @@
 }
 .note {
     width: 100%;
+    max-width: 450px;
     margin: 30px 0px;
     font-weight: 800;
     font-size: clamp(25px, 3vmin, 22px);
@@ -127,9 +128,15 @@
         max-width: 90vw;
         height: auto;
     }
+    .note{
+        max-width: 85vw;
+    }
 }
 @media screen and (max-width:900px) {
     #mint{
         height: auto;
+    }
+    .note{
+        max-width: 390px;
     }
 }
