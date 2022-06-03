@@ -14,12 +14,12 @@ function Note() {
           </header>
           <img className="divide" src="/images/GT-phone-header-border.png" />
           <main>
-            <div className="row ">
-              <div className="col-md-5">
+            <div className="row flex-column align-items-center">
+              <div className="col-lg-6 col-md-5 col-sm-4">
                 <img id="Cage" src="/images/GT-cage.png" className="nft__img" />
               </div>
-              <div className="col-md-7 d-flex align-items-center">
-                <p className="mt-4">
+              <div className="col-12 d-flex align-items-center">
+                <p className="mt-4 text-center">
                   <strong>We are reserving 1,000 goblins.</strong> Because we
                   want to.
                 </p>
