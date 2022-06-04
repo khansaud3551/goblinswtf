@@ -1,5 +1,6 @@
 import React from "react";
 import "../Style/mint.css";
+import ConnectWallet from "./ConnectWallet";
 
 function Note() {
   return (
@@ -19,7 +20,7 @@ function Note() {
           {/*<span id="left"></span>*/}
           {/*<p>/</p>*/}
           {/*<span id="Counter__Real">9,999</span>*/}
-          <p>Connect Wallet</p>
+          <ConnectWallet />
         </div>
       </div>
 

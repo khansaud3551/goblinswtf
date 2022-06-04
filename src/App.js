@@ -37,7 +37,7 @@ function App() {
     if (mint === "mint") {
       setMint("displayMint");
       setBtnGo("hideBtnGo");
-      startAudio();
+      // startAudio();
       setInitial("Site-Container");
       //add class to ref
       newref.current.classList.add("loaded");
