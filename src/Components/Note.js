@@ -3,7 +3,26 @@ import "../Style/mint.css";
 
 function Note() {
   return (
-    <div className="col-lg-6">
+    <div id="Mintery" className="">
+      <div id="Masthead">
+        <img
+          id="Logo"
+          className="unselectable"
+          loading="lazy"
+          src="https://goblintown.wtf/i/GT-logo.gif"
+          width={400}
+        />
+        <div id="Counter">
+          {/*<div id="Counter__Goblin">*/}
+          {/*	<img src="https://goblintown.wtf/i/GT-garble.gif" width="88" />*/}
+          {/*</div>*/}
+          {/*<span id="left"></span>*/}
+          {/*<p>/</p>*/}
+          {/*<span id="Counter__Real">9,999</span>*/}
+          <p>Connect Wallet</p>
+        </div>
+      </div>
+
       <div id="Actions">
         <div className="note">
           <header>
@@ -16,7 +35,7 @@ function Note() {
           <main>
             <div className="row flex-column align-items-center">
               <div className="col-lg-6 col-md-5 col-sm-4">
-                <img id="Cage" src="/images/GT-cage.png" className="nft__img" />
+                {/* <img id="Cage" src="/images/GT-cage.png" className="nft__img" /> */}
               </div>
               <div className="col-12 d-flex align-items-center">
                 <p className="mt-4 text-center">

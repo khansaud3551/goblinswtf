@@ -1,4 +1,22 @@
-.App{
+:root {
+  --gulf: #90b3aa;
+  --gulf-dark: #81afa4;
+  --clay: #8b825e;
+  --chino: #b9b389;
+  --quicksand: #bea193;
+  --whiskey: #ca9e7c;
+  --manatee: #9598a6;
+  --shady-lady: #a28ea1;
+  --cerulean: #00a2d9;
+  --golden: #f1d880;
+  --black-white: #e6e2d8;
+  --lemon: #fff9cb;
+  --kelp: #3f3e2b;
+  --font: blue-goblet, sans-serif;
+  --font-alt: blue-goblet-alt, sans-serif;
+}
+
+.App {
   background-image: url(../../public/images/big.png);
   background-size: cover;
   background-position: center;
@@ -6,22 +24,21 @@
   padding: 20px 0px;
 }
 
-
-@media screen and (max-width:1000px) {
-  .App{
+@media screen and (max-width: 1000px) {
+  .App {
     background-image: url(../../public/images/med.png);
   }
-  .social__icon > img{
+  .social__icon > img {
     height: 50px;
   }
 }
-@media screen and (max-width:700px) {
-  .App{
+@media screen and (max-width: 700px) {
+  .App {
     background-image: url(../../public/images/sm.png);
   }
 }
 
-.social__icons{
+.social__icons {
   margin: 30px 0px;
   display: flex;
   justify-content: center;
@@ -30,14 +47,14 @@
   outline: none;
   margin: 0px 30px;
 }
-.social__icon > img{
+.social__icon > img {
   height: 70px;
   cursor: pointer;
   transition: 0.15s;
 }
-.disabled{
+.disabled {
   opacity: 0.5;
 }
-.social__icon:hover > img{
+.social__icon:hover > img {
   transform: rotate(-10deg);
 }

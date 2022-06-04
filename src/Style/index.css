@@ -1,6 +1,6 @@
 @font-face {
-  font-family:blue-goblet;
-  src: url('../../public/images/BlueGobletBold.otf');
+  font-family: blue-goblet;
+  src: url("../../public/images/BlueGobletBold.otf");
 }
 
 *:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
@@ -19,14 +19,13 @@
 
 body {
   margin: 0;
-  font-family:var(--font);
+  font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family:var(--font),
-    monospace;
+  font-family: var(--font), monospace;
 }
 
 body::-webkit-scrollbar {
@@ -34,10 +33,10 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #B79CB0;
+  background: #b79cb0;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color:#2c4774;
+  background-color: #2c4774;
   border-radius: 50px;
 }
