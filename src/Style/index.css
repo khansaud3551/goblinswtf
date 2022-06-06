@@ -1,13 +1,13 @@
 @font-face {
-  font-family: blue-goblet;
-  src: url("../../public/images/BlueGobletBold.otf");
+  font-family: DemonsAndDarlings;
+  src: url("../../public/images/DemonsAndDarlings.ttf") format("truetype");
 }
 
 *:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
   all: unset;
   display: revert;
-  --font: blue-goblet;
-  --font-alt: blue-goblet-alt;
+  --font: DemonsAndDarlings;
+  --font-alt: DemonsAndDarlings-alt;
 }
 
 *,
@@ -22,6 +22,15 @@ body {
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/hearthstone-cursor.png)
+      10 2,
+    auto;
+
+  overflow-x: hidden;
+}
+
+.img_conect1 {
+  cursor: pointer;
 }
 
 code {
@@ -33,10 +42,10 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #b79cb0;
+  background: #592e2c;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #2c4774;
+  background-color: #fa4a03;
   border-radius: 50px;
 }

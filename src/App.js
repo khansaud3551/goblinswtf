@@ -21,12 +21,23 @@ function App() {
 
   const startAudio = () => {
     myRef.current.play();
+    //reduce speed of audio
+    //reduce voice of audio
+
+    myRef.current.playbackRate = 0.8;
+    myRef.current.volume = 0.5;
     changeAudioStatus(true);
   };
-  const pauseAudio = () => {
-    console.log("here");
-    myRef.current.pause();
-    changeAudioStatus(false);
+
+  //toogle audio on off
+  const toggleAudio = () => {
+    if (audioStatus) {
+      myRef.current.pause();
+      changeAudioStatus(false);
+    } else {
+      myRef.current.play();
+      changeAudioStatus(true);
+    }
   };
 
   // Show Mint Section
@@ -37,7 +48,8 @@ function App() {
     if (mint === "mint") {
       setMint("displayMint");
       setBtnGo("hideBtnGo");
-      // startAudio();
+
+      startAudio();
       setInitial("Site-Container");
       //add class to ref
       newref.current.classList.add("loaded");
@@ -65,7 +77,7 @@ function App() {
         )}
 
         <div className={mint}>
-          <audio ref={myRef} loop src="/images/music.mp3" />
+          <audio ref={myRef} loop src="/images/m.mpeg" />
 
           {/* Social Icons */}
           <div id="Controls">
@@ -74,23 +86,33 @@ function App() {
               id="Twitter"
               target="_blank"
             >
-              <img
-                src="https://goblintown.wtf/i/GT-twitter-circle.png"
-                width={64}
-              />
+              <img src="/images/icons/Twitter.png" width={64} />
             </a>
             <a
               href="https://opensea.io/collection/goblintownwtf"
               id="Opensea"
               target="_blank"
             >
-              <img src="https://goblintown.wtf/i/GT-opensea.png" width={64} />
+              <img src="/images/icons/OS.png" width={64} />
             </a>
-            <span id="Volume">
-              <img
-                src="https://goblintown.wtf/i/GT-volume-circle.png"
-                width={64}
-              />
+            <span
+              onClick={toggleAudio}
+              id={`${audioStatus ? "Volume" : "voloff"}`}
+            >
+              {audioStatus ? (
+                <img
+                  className="image_bot"
+                  src="/images/icons/Music_On.png"
+                  width={64}
+                />
+              ) : (
+                <img
+                  className="image_bot"
+                  src="/images/icons/Music_Off.png"
+                  width={64}
+                />
+              )}
+              <img />
             </span>
           </div>
 
@@ -103,21 +125,16 @@ function App() {
           </div>
         </div>
       </div>
-      <div id="Underground">
+      <div className="bg_img">
+        <img className="image_bot" src="/images/DemonIllustration2.png" />
+      </div>
+      {/* <div id="Underground">
         <div id="Psst">
           <img src="https://www.goblintown.wtf/i/psst.png" />
         </div>
-        <div id="Goblin-Family">
-          <img
-            id="Family"
-            src="https://www.goblintown.wtf/i/GT-family-compressed.png"
-          />
-        </div>
-        <img
-          id="Rocks"
-          src="https://www.goblintown.wtf/i/GT-rocks-compressed.png"
-        />
-      </div>
+
+        <img id="Rocks" src="/images/DemonIllustration2.png" />
+      </div> */}
     </>
   );
 }

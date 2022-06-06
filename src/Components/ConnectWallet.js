@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 function ConnectWallet() {
   const [errorMessage, setErrorMessage] = useState(null);
   const [connButtonText, setConnButtonText] = useState("Connect Wallet");
+  const [walletConnected, setWalletConnected] = useState(false);
   const [account, setAccount] = useState(null);
   const [balance, setBalance] = useState(null);
 
@@ -21,6 +22,7 @@ function ConnectWallet() {
           method: "eth_requestAccounts",
         });
         await accountsChanged(res[0]);
+        setWalletConnected(true);
         setConnButtonText("Wallet Connected");
       } catch (err) {
         console.error(err);
@@ -52,9 +54,19 @@ function ConnectWallet() {
   };
 
   return (
-    <div className="conectbtn">
-      <p className="conectbtn" onClick={connectHandler}>
-        {connButtonText}
+    // conectbtn
+    <div className="">
+      <p className="" onClick={connectHandler}>
+        {/* {connButtonText} */}
+        {walletConnected ? (
+          <>
+            <img className="img_conect1" src="/images/Connected.png" alt="" />
+          </>
+        ) : (
+          <>
+            <img className="img_conect1" src="/images/Connect.png" alt="" />
+          </>
+        )}
       </p>
     </div>
   );

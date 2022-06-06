@@ -1,13 +1,13 @@
-.hideBtnGo{
+.hideBtnGo {
   display: none;
 }
 .btnGo {
   font-size: 28px;
   border: 2px solid black;
   padding: 10px 16px 8px;
-  background: var(--whiskey);
+  background: #d9c2a4;
   border-radius: 9px 7px 5px 8px;
-  color: #000;
+  color: #dd0e0e;
   height: 56px;
   cursor: pointer;
   position: relative;
@@ -16,9 +16,8 @@
   box-shadow: 0 2px 0 black;
   filter: drop-shadow(4px 6px 0 rgba(0, 0, 0, 0.125));
   transition: 5s;
-  font-weight:bolder;
+  font-weight: bolder;
 }
-
 
 * {
   --whiskey: #ca9e7c;
@@ -28,12 +27,13 @@
 #Enter:hover {
   -webkit-animation: flicker 0.25s linear infinite;
   animation: flicker 0.25s linear infinite;
-  background: var(--gulf-dark);
+  background: #fc711b;
   color: white;
   font-weight: bolder;
 }
 
 #Enter {
+  background-color: #d9c2a4;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;

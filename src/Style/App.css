@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "BPchildLefty";
+  src: local("BPchildLefty"),
+    url("/public/fonts/BPchildLefty.ttf") format("truetype");
+  /* src: url("/public/fonts/BPchildLefty.ttf") format("open"); */
+  /* url("/public/fonts/Quicksand-Light.woff") format("woff"); */
+  font-weight: 300;
+  font-style: normal;
+}
+
 :root {
   --gulf: #90b3aa;
   --gulf-dark: #81afa4;
@@ -12,16 +22,20 @@
   --black-white: #e6e2d8;
   --lemon: #fff9cb;
   --kelp: #3f3e2b;
-  --font: blue-goblet, sans-serif;
-  --font-alt: blue-goblet-alt, sans-serif;
+  --font: BPchildLefty, sans-serif;
+  --font-alt: BPchildLefty-alt, sans-serif;
 }
 
 .App {
-  background-image: url(../../public/images/big.png);
+  background-image: url(../../public/images/DemonIllustration.png);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   padding: 20px 0px;
+}
+
+#voloff {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
@@ -57,4 +71,9 @@
 }
 .social__icon:hover > img {
   transform: rotate(-10deg);
+}
+
+.goblin_bg > h2 {
+  font-size: 42px;
+  margin-top: 11px;
 }
