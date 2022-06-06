@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
   .App {
     background-image: url(../../public/images/med.png);
   }
@@ -50,7 +50,7 @@
   .App {
     background-image: url(../../public/images/sm.png);
   }
-}
+} */
 
 .social__icons {
   margin: 30px 0px;
