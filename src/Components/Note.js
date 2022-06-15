@@ -12,6 +12,7 @@ function Note() {
           loading="lazy"
           src="https://goblintown.wtf/i/GT-logo.gif"
           width={400}
+          alt="GoblinTown"
         />
         <div id="Counter1">
           {/*<div id="Counter__Goblin">*/}
@@ -20,7 +21,7 @@ function Note() {
           {/*<span id="left"></span>*/}
           {/*<p>/</p>*/}
           {/*<span id="Counter__Real">9,999</span>*/}
-          <ConnectWallet />
+          {/* <ConnectWallet /> */}
         </div>
       </div>
 

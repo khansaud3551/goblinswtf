@@ -77,3 +77,29 @@
   font-size: 42px;
   margin-top: 11px;
 }
+
+.img_conect1 {
+  transition: all 0.3s ease-in-out;
+
+  width: 42%;
+}
+
+.img_conect1:hover {
+  transform: scale(1.1);
+}
+
+.connect__pos {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  z-index: 99;
+  position: fixed;
+  top: 12px;
+  right: 15px;
+  pointer-events: initial !important;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.flex_32 {
+  display: flex;
+  justify-content: end;
+}

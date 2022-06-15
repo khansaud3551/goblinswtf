@@ -49,3 +49,9 @@ body::-webkit-scrollbar-thumb {
   background-color: #fa4a03;
   border-radius: 50px;
 }
+
+.Toastify__bounce-enter--top-right,
+.Toastify__bounce-enter--bottom-right {
+  position: relative !important;
+  z-index: 1000000 !important;
+}

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import ConnectWallet from "./Components/ConnectWallet";
 import Mint from "./Components/Mint";
 import Note from "./Components/Note";
 import "./Style/App.css";
@@ -115,6 +116,8 @@ function App() {
               <img />
             </span>
           </div>
+
+          <ConnectWallet />
 
           {/* Display On Click */}
           <div id={initial} className="">

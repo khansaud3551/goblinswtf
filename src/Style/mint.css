@@ -259,15 +259,15 @@ h1 {
   width: 100%;
 }
 #Convo::before {
-  --little-size: 24px;
+  --little-size: 40px;
   content: "";
   position: absolute;
-  background: transparent url("https://goblintown.wtf/i/GT-little1-crop.png")
-    no-repeat center center/var(--little-size);
-  top: calc(var(--little-size) * -1 + 10px);
+  background: transparent url("/public/images/MiniInferno.png") no-repeat center
+    center/var(--little-size);
+  top: calc(var(--little-size) * -1 + 17px);
   width: var(--little-size);
   aspect-ratio: 1;
-  right: 12px;
+  right: 10px;
   transform: rotate(24deg);
 }
 #Convo::after {
