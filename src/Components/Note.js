@@ -1,6 +1,5 @@
 import React from "react";
 import "../Style/mint.css";
-import ConnectWallet from "./ConnectWallet";
 
 function Note() {
   return (

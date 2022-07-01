@@ -1,0 +1,53 @@
+.lore {
+  position: relative;
+}
+.lore__image1 {
+  background-image: url(https://www.trippinapetribe.xyz/imgs/nft-slider-1.png);
+  background-size: auto 100%;
+  background-position: 0 0;
+  animation: scrollGrid 160s linear infinite;
+  height: 133px;
+  background-repeat: repeat-x;
+  margin-top: 150px;
+  margin-bottom: 1rem;
+}
+
+.lore__image2 {
+  background-image: url(https://www.trippinapetribe.xyz/imgs/nft-slider-1.png);
+  background-size: auto 100%;
+  background-position: 0 0;
+  animation: scrollGrid 180s linear infinite;
+  height: 133px;
+  background-repeat: repeat-x;
+  margin-bottom: 1rem;
+}
+
+.lore__image3 {
+  background-image: url(https://www.trippinapetribe.xyz/imgs/nft-slider-1.png);
+  background-size: auto 100%;
+  background-position: 0 0;
+  animation: scrollGrid 200s linear infinite;
+  height: 133px;
+  background-repeat: repeat-x;
+  margin-bottom: 150px;
+}
+
+.img__nft {
+  position: absolute;
+  bottom: 10rem;
+  left: 0;
+}
+
+.img__nft > img {
+  width: 950px;
+  height: 847px;
+}
+
+@keyframes scrollGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -7200px 0;
+  }
+}
