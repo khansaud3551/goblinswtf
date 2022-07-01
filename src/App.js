@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import ConnectWallet from "./Components/ConnectWallet";
 import Mint from "./Components/Mint";
 import Note from "./Components/Note";
+import Roadmap from "./Components/Roadmap";
+import SocialIcons from "./Components/SocialIcons";
 import "./Style/App.css";
 import "./Style/Button.css";
 
@@ -10,6 +12,8 @@ function App() {
   const [audioStatus, changeAudioStatus] = useState(false);
   const [loading, setLoading] = useState(false);
   const [initial, setInitial] = useState("");
+  const [underground, setUnderground] = useState("hideUnderground");
+  const [banner, setBanner] = useState(false);
 
   useEffect(() => {
     setInterval(() => {
@@ -19,6 +23,8 @@ function App() {
 
   const myRef = useRef();
   const newref = useRef();
+  const videoRef = useRef();
+  const opacityRef = useRef();
 
   const startAudio = () => {
     myRef.current.play();
@@ -27,6 +33,7 @@ function App() {
 
     myRef.current.playbackRate = 0.8;
     myRef.current.volume = 0.5;
+
     changeAudioStatus(true);
   };
 
@@ -41,103 +48,186 @@ function App() {
     }
   };
 
+  //play video
+  const playVideo = () => {
+    setBtnGo("hideBtnGo");
+    //add classname opacity to video
+    videoRef.current.classList.add("add__opcaity");
+    //play on loop
+    videoRef.current.loop = true;
+
+    videoRef.current.play();
+    //add a delay to update the state
+
+    setTimeout(() => {
+      setBanner(true);
+    }, 2000);
+  };
+
   // Show Mint Section
   const [mint, setMint] = useState("mint");
   const [btnGo, setBtnGo] = useState("btnGo");
 
   const displayMint = () => {
-    if (mint === "mint") {
-      setMint("displayMint");
-      setBtnGo("hideBtnGo");
-
-      startAudio();
-      setInitial("Site-Container");
-      //add class to ref
-      newref.current.classList.add("loaded");
-    } else {
-      setMint("mint");
-    }
+    // if (mint === "mint") {
+    //   setMint("displayMint");
+    //   setBanner(true);
+    //   startAudio();
+    //   setInitial("Site-Container");
+    //   setUnderground("bg_img");
+    //   //add class to ref
+    //   newref.current.classList.add("loaded");
+    // } else {
+    //   setMint("mint");
+    // }
   };
 
   return (
     <>
-      <div ref={newref} id="Site" className="App ">
-        {/* Home Screen Button */}
-        {loading ? (
-          <button onClick={displayMint} className={btnGo} id="Enter">
-            Fucking <span>enter</span> Already
-          </button>
-        ) : (
-          <button
-            className={btnGo}
-            style={{ cursor: "not-allowed" }}
-            id="Enter"
-          >
-            Hold On Dammit
-          </button>
-        )}
+      {banner ? (
+        <>
+          <div ref={newref} id="Site" className={`${banner} App loaded`}>
+            <div className="displayMint">
+              <audio ref={myRef} loop src="/images/m.mpeg" />
 
-        <div className={mint}>
-          <audio ref={myRef} loop src="/images/m.mpeg" />
+              {/* Social Icons */}
+              <SocialIcons
+                toggleAudio={toggleAudio}
+                audioStatus={audioStatus}
+              />
 
-          {/* Social Icons */}
-          <div id="Controls">
-            <a
-              href="https://twitter.com/goblintownwtf"
-              id="Twitter"
-              target="_blank"
-            >
-              <img src="/images/icons/Twitter.png" width={64} />
-            </a>
-            <a
-              href="https://opensea.io/collection/goblintownwtf"
-              id="Opensea"
-              target="_blank"
-            >
-              <img src="/images/icons/OS.png" width={64} />
-            </a>
-            <span
-              onClick={toggleAudio}
-              id={`${audioStatus ? "Volume" : "voloff"}`}
-            >
-              {audioStatus ? (
-                <img
-                  className="image_bot"
-                  src="/images/icons/Music_On.png"
-                  width={64}
-                />
+              {/* <ConnectWallet /> */}
+
+              {/* Display On Click */}
+              <div id="Site-Container" className="">
+                {/* Mint Phone Screen */}
+                {/* <Mint /> */}
+                {/* Note */}
+                {/* <Note /> */}
+                <div className="logo__box">
+                  <div className="tribe__text">
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/t.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/r.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/i.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/b.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/e.png"
+                      alt="GoblinTown"
+                    />
+                  </div>
+                  <div className="of__text">
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/o.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/f.png"
+                      alt="GoblinTown"
+                    />
+                  </div>
+                  <div className="demacia_text">
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/d.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/e.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/m.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/a.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/c.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/i.png"
+                      alt="GoblinTown"
+                    />
+                    <img
+                      className="unselectable Logo"
+                      loading="lazy"
+                      src="/images/title/a.png"
+                      alt="GoblinTown"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg_img">
+            <img className="image_bot" src="/images/DemonIllustration2.png" />
+            <Roadmap />
+          </div>
+        </>
+      ) : (
+        <>
+          <section ref={opacityRef} className="showcase ">
+            <header></header>
+            <video ref={videoRef} src="images/bg-video.mp4" muted loop />
+            <div className="overlay" />
+            <div className="text">
+              {loading ? (
+                <button onClick={playVideo} className={btnGo} id="Enter1">
+                  Fucking <span>enter</span> Already
+                </button>
               ) : (
-                <img
-                  className="image_bot"
-                  src="/images/icons/Music_Off.png"
-                  width={64}
-                />
+                <button
+                  className={btnGo}
+                  style={{ cursor: "not-allowed" }}
+                  id="Enter1"
+                >
+                  Hold On Dammit
+                </button>
               )}
-              <img />
-            </span>
-          </div>
-
-          <ConnectWallet />
-
-          {/* Display On Click */}
-          <div id={initial} className="">
-            {/* Mint Phone Screen */}
-            <Mint />
-            {/* Note */}
-            <Note />
-          </div>
-        </div>
-      </div>
-      <div className="bg_img">
-        <img className="image_bot" src="/images/DemonIllustration2.png" />
-      </div>
-      {/* <div id="Underground">
-        <div id="Psst">
-          <img src="https://www.goblintown.wtf/i/psst.png" />
-        </div>
-
-        <img id="Rocks" src="/images/DemonIllustration2.png" />
-      </div> */}
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 }

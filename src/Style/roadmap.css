@@ -1,0 +1,59 @@
+.roadmap {
+  background-color: #532923;
+  height: 100vh;
+  color: white;
+  background-image: url(../../public/images/bg-2.jpg);
+  padding: 100px 0px;
+}
+
+.section__roadmap {
+  max-width: 1200px;
+  margin: auto;
+  background: #471524e8;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px rgb(252 113 27);
+}
+
+.box__dotes {
+  display: flex;
+  gap: 0px 50px;
+  width: 100%;
+  justify-content: center;
+}
+
+.box__dotes > h1 {
+  font-size: 100px;
+  color: #fc711b;
+}
+
+.roadmap__heading {
+  font-size: 60px;
+}
+
+.box__content {
+  width: 100%;
+}
+
+.box__content__1,
+.box__content__2,
+.box__content__3,
+.box__content__14 > p {
+  font-size: 45px;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-top: 30px;
+}
+
+.box__content__1 > p {
+  margin-top: 20px;
+}
+.box__content__2 > p {
+  margin-top: 10px;
+}
+.box__content__3 > p {
+  margin-top: 0px;
+}
+.box__content__4 > p {
+  margin-top: 0px;
+}

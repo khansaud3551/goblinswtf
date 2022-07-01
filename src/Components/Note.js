@@ -6,22 +6,85 @@ function Note() {
   return (
     <div id="Mintery" className="">
       <div id="Masthead">
-        <img
-          id="Logo"
-          className="unselectable"
-          loading="lazy"
-          src="https://goblintown.wtf/i/GT-logo.gif"
-          width={400}
-          alt="GoblinTown"
-        />
-        <div id="Counter1">
-          {/*<div id="Counter__Goblin">*/}
-          {/*	<img src="https://goblintown.wtf/i/GT-garble.gif" width="88" />*/}
-          {/*</div>*/}
-          {/*<span id="left"></span>*/}
-          {/*<p>/</p>*/}
-          {/*<span id="Counter__Real">9,999</span>*/}
-          {/* <ConnectWallet /> */}
+        <div className="logo__box">
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/t.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/r.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/i.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/b.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/e.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/o.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/f.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/d.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/e.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/m.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/a.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/c.png"
+            alt="GoblinTown"
+          />
+          <img
+            className="unselectable Logo"
+            loading="lazy"
+            src="/images/title/a.png"
+            alt="GoblinTown"
+          />
         </div>
       </div>
 

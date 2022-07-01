@@ -14,6 +14,12 @@
   box-sizing: border-box;
 }
 
+#Site.loaded #Site-Container {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: initial;
+}
+
 a,
 button {
   cursor: revert;
@@ -70,41 +76,11 @@ meter {
   -webkit-user-drag: element;
 }
 
-:root {
-  --gulf: #90b3aa;
-  --gulf-dark: #81afa4;
-  --clay: #8b825e;
-  --chino: #b9b389;
-  --quicksand: #bea193;
-  --whiskey: #ca9e7c;
-  --manatee: #9598a6;
-  --shady-lady: #a28ea1;
-  --cerulean: #00a2d9;
-  --golden: #f1d880;
-  --black-white: #e6e2d8;
-  --lemon: #fff9cb;
-  --kelp: #3f3e2b;
-  --font: blue-goblet, sans-serif;
-  --font-alt: blue-goblet-alt, sans-serif;
-}
-
 body {
   min-height: 100vh;
   font: 700 24px/1 var(--font);
   background: linear-gradient(0deg, var(--manatee) 0%, var(--shady-lady) 100%);
   background-attachment: fixed;
-}
-@media (max-width: 760px) {
-  body #Mintery {
-    order: 0;
-  }
-  body #Site-Container {
-    flex-direction: column;
-  }
-  body #Mountain {
-    width: 100%;
-    margin-top: 48px;
-  }
 }
 
 body {
@@ -123,12 +99,12 @@ h1 {
   text-transform: uppercase;
 }
 
-#Logo {
-  width: min(400px, 100%);
+.Logo {
+  width: min(120px, 100%);
   margin-inline: auto;
   position: relative;
 }
-#Logo::before {
+.Logo::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -154,7 +130,7 @@ h1 {
   justify-content: center;
   gap: 64px;
   position: relative;
-  width: min(880px, 100%);
+  width: min(100%, 100%);
   margin-inline: auto;
   height: 100%;
   z-index: 10;
@@ -387,23 +363,25 @@ h1 {
 
 button {
   font-size: 28px;
-  border: 2px solid black;
+  border: 2px solid #fc711b;
   padding: 12px 16px 8px;
-  background: var(--whiskey);
+  color: white;
+  background: #532923;
   border-radius: 9px 7px 5px 8px;
-  height: 56px;
+
   cursor: pointer;
   position: relative;
   width: 100%;
   text-align: center;
-  box-shadow: 0 2px 0 black;
-  filter: drop-shadow(4px 6px 0 rgba(0, 0, 0, 0.125));
+  /* box-shadow: 0 2px 0 black; */
+  /* filter: drop-shadow(4px 6px 0 rgba(0, 0, 0, 0.125)); */
 }
 button:hover {
   -webkit-animation: flicker 0.25s linear infinite;
   animation: flicker 0.25s linear infinite;
-  background: var(--gulf-dark);
+  background: #fc711b;
   color: white;
+  font-weight: bolder;
 }
 button:hover span {
   -webkit-animation: flicker-font 0.25s linear infinite;
@@ -424,18 +402,16 @@ button:hover span {
   right: 40px;
 }
 
-#Enter {
+#Enter1 {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   z-index: 99;
-  position: fixed;
-  top: 40px;
-  right: 40px;
+
   pointer-events: initial !important;
   transition: opacity 0.5s ease-in-out;
 }
-#Enter::before {
+#Enter1::before {
   --little-size: 32px;
   content: "";
   position: absolute;
@@ -448,7 +424,7 @@ button:hover span {
   z-index: 9;
 }
 @media (max-width: 480px) {
-  #Enter {
+  #Enter1 {
     right: 16px;
     max-width: calc(100% - 32px);
   }
@@ -669,105 +645,6 @@ button:hover span {
   margin-bottom: -60px;
 }
 
-#Actions {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin: 16px auto 0;
-}
-#Actions button {
-  flex: 1 1 calc(50% - 8px);
-  min-width: 224px;
-}
-
-#Fire-Mid {
-  -webkit-animation: fiery 2s ease-in-out infinite;
-  animation: fiery 2s ease-in-out infinite;
-  transform: translateY(2%);
-}
-
-#Fire-Front {
-  -webkit-animation: fiery 10s ease-in-out infinite;
-  animation: fiery 10s ease-in-out infinite;
-  margin-bottom: -4px;
-  transform: translateY(2%);
-}
-
-#City {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  transition: all 1.5s ease-in-out;
-  transform-origin: bottom right;
-  transform: scale(0.75);
-}
-#City > * {
-  position: absolute;
-  inset: 0;
-}
-#City img {
-  width: 100%;
-  margin-top: auto;
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
-#Mountain {
-  position: fixed;
-  inset: 0;
-  left: 0;
-  width: 50%;
-  pointer-events: none;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-#Mountain img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: top;
-  object-position: top;
-}
-#Mountain #Littles > * {
-  position: absolute;
-  inset: 0;
-}
-#Mountain #Littles img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-#Mountain > * {
-  position: absolute;
-  inset: 0;
-}
-#Mountain__Mass {
-  z-index: 1;
-}
-#Mountain__Light {
-  z-index: 2;
-  -webkit-animation: fiery 4s ease-in-out infinite;
-  animation: fiery 4s ease-in-out infinite;
-}
-#Mountain__Animation {
-  z-index: 0;
-}
-
 .disabled {
   -webkit-animation: none !important;
   animation: none !important;
@@ -779,26 +656,6 @@ button:hover span {
   -webkit-animation: none !important;
   animation: none !important;
   text-transform: none !important;
-}
-
-#Counter {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 16px 24px 20px 14px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  background: transparent url("https://goblintown.wtf/i/GT-counter-art.png")
-    no-repeat center center/100% 100%;
-  margin: 0 auto;
-}
-#Counter__Goblin img {
-  transform: translateY(2px);
 }
 
 #Controls {
@@ -850,6 +707,7 @@ button:hover span {
   font-weight: 400;
   font-size: clamp(20px, 3vmin, 22px);
   line-height: 1.125;
+
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -918,15 +776,6 @@ button:hover span {
   margin: 0 auto;
 }
 
-#Follow {
-  padding: 8px;
-  text-align: Center;
-  font-size: 28px;
-  font-weight: 700;
-  background: black;
-  color: white;
-}
-
 #Underground {
   /* height: 1080px; */
   z-index: 800;
@@ -992,5 +841,18 @@ button:hover span {
 @media (max-width: 480px) {
   #Psst {
     top: -66px;
+  }
+}
+
+@media (max-width: 760px) {
+  body #Mintery {
+    order: 0;
+  }
+  body #Site-Container {
+    flex-direction: column;
+  }
+  body #Mountain {
+    width: 100%;
+    margin-top: 48px;
   }
 }

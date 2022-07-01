@@ -1,13 +1,15 @@
 .hideBtnGo {
+  transition: opacity 1s ease-out;
+  opacity: 0;
   display: none;
 }
 .btnGo {
   font-size: 28px;
   border: 2px solid black;
   padding: 10px 16px 8px;
-  background: #d9c2a4;
+  background: #532923;
   border-radius: 9px 7px 5px 8px;
-  color: #dd0e0e;
+  color: white;
   height: 56px;
   cursor: pointer;
   position: relative;
